@@ -1,8 +1,23 @@
+import { useScroll } from 'framer-motion'
 import React from 'react'
 
 const Navbar = () => {
+
+  const { scrollY } = useScroll();
+  const [navBg, setNavBg] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setNavBg(window.scrollY > 0);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className='fixed top-0 w-full z-10 flex items-center justify-between h-20 px-32 text-white'>
+    <nav
+      className={`fixed top-0 w-full z-50 flex items-center justify-between h-fit px-32 text-white transition-colors duration-500 ${navBg ? 'bg-blue-800' : ''}`}
+    >
       <div className='mt-6'>
         <img src='/image.png' alt='Christ Goshen City' className='w-28 h-28 p-4 object-cover rounded-full' />
       </div>
@@ -10,8 +25,8 @@ const Navbar = () => {
         <li className='px-7 py-3 text-sm hover:bg-white hover:text-black transition-colors duration-500 rounded-full'><a href='#'>HOME</a></li>
         <li className='px-7 py-3 text-sm hover:bg-white hover:text-black transition-colors duration-500 rounded-full'><a href='#'>WHO WE ARE</a></li>
         <li className='px-7 py-3 text-sm hover:bg-white hover:text-black transition-colors duration-500 rounded-full'><a href='#'>WHAT WE DO</a></li>
-        <li className='px-7 py-3 text-sm bg-white text-black transition-colors duration-500 rounded-full'><a href='#'>ONLINE GIVING</a></li>
-        <li className='px-7 py-3 text-sm bg-white text-black transition-colors duration-500 rounded-full'><a href='#'>MEDIA RESOURCES</a></li>
+        <li className='px-7 py-3 text-sm hover:bg-white hover:text-black transition-colors duration-500 rounded-full'><a href='#'>ONLINE GIVING</a></li>
+        <li className='px-7 py-3 text-sm hover:bg-white hover:text-black transition-colors duration-500 rounded-full'><a href='#'>MEDIA RESOURCES</a></li>
       </ul>
     </nav>
   )

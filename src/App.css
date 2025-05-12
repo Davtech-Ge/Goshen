@@ -2,41 +2,97 @@
 @tailwind components;
 @tailwind utilities;
 
-.App {
-  text-align: center;
+.customShadow {
+  box-shadow: 5px 0px 10px rgba(0,0,0,0.2);
+}
+/* user table*/
+.userTable {
+  @apply bg-slate-200
+}
+.userTable th{
+    @apply border text-base font-medium
+}
+.userTable td {
+  @apply border text-base text-center
+}
+.coverPhoto {
+  @apply bg-cover bg-center bg-no-repeat;
+  background: url('./logo/cover.png');
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+  min-height: 160px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.messages {
+  background-image: url('./logo/1745803848598.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.seed {
+  background-image: url('./logo/edited2.png');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.event {
+  background-image: url('./logo/externalminis.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.about {
+  background-image: url('./logo/aboutGosh.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.school {
+  background-image: url('./logo/GoshenSChool.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.contact {
+  background-image: url('./logo/reachout.png');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.fellowship {
+  background-image: url('./logo/homecell.png');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.background {
+  @apply bg-cover bg-center bg-no-repeat;
+  background-image: url('./logo/bgBlue.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-track{
+  background: #111827;
+}
+
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(180deg, #01012e, #210141);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: linear-gradient(180deg, #010124, #1b0235);
 }

@@ -20,7 +20,7 @@ const heroData = [
     image: image1
   },
   {
-    text: 'A Place where Gods word is revealed',
+    text: 'Gods Word Personified',
     image: image2
   },
   {

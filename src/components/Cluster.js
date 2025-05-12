@@ -8,9 +8,9 @@ const handleClick = (buttonId) => {
 };
 
 return (
-    <section className='bg-black h-[80vh] text-white py-4 px-4 relative'>
+    <section className='bg-black h-[80vh] text-white py-4 px-4 sm:gap-4 relative'>
         <h1 className='md:text-2xl text-lg'>Latest Feature</h1>
-        <div className='w-full max-w-5xl h-[60vh] mt-20 mx-auto'>
+        <div className='w-full max-w-4xl h-[70vh] mt-20 mx-auto'>
             <AnimatePresence>
                 <motion.div 
                     whileHover={{ scale: 1.05}}
@@ -46,11 +46,11 @@ return (
             </AnimatePresence>
         </div>
         <AnimatePresence>
-        <div className='lg:absolute lg:top-1/4 lg:left-4 grid lg:grid-cols-1 grid-cols-3 gap-4 text-center mx-6'>
+        <div className='lg:absolute lg:top-1/4 sm:bg-black lg:left-3 grid lg:grid-cols-1 grid-cols-3 gap-4 text-center mx-6'>
                 <motion.button
                     whileHover={{ scale: 1.2}}
                     whileTap={{ scale: 0.8}}
-                onClick={() => handleClick(1)} className='bg-gray-800 lg:py-4 py-2 lg:px-4 px-3 shadow-lg rounded'>
+                onClick={() => handleClick(1)} className='bg-gray-800 lg:py-4 py-2 lg:px-4 px-3 mr-6 shadow-lg rounded'>
                     <div className='text-2xl mb-2'><span className='text-3xl opacity-75'>▶️</span></div>
                     <h4 className='text-lg font-semibold'>Featured Sermon</h4>
                     <p className='text-gray-400 text-sm'>APOSTLE GLORY HELEN IKELEJI</p>
@@ -59,7 +59,7 @@ return (
                 <motion.button 
                     whileHover={{ scale: 1.2}}
                     whileTap={{ scale: 0.8}}
-                onClick={() => handleClick(2)} className='bg-gray-800 lg:py-4 shadow-lg py-2 lg:px-4 px-3 rounded'>
+                onClick={() => handleClick(2)} className='bg-gray-800 lg:py-4 shadow-lg py-2 lg:px-4 mr-6 px-3 rounded'>
                     <div className='text-2xl mb-2'><span className='text-3xl opacity-75'>🎵</span></div>
                     <h4 className='text-lg font-semibold'>Watch us LIVE</h4>
                     <p className='text-gray-400 text-sm'>CHRIST GOSHEN EXPERIENCE</p>
@@ -68,7 +68,7 @@ return (
                 <motion.button 
                     whileHover={{ scale: 1.2}}
                     whileTap={{ scale: 0.8}}
-                onClick={() => handleClick(3)} className='bg-gray-800 py-3 shadow-lg px-4 rounded'>
+                onClick={() => handleClick(3)} className='bg-gray-800 py-3 shadow-lg px-4 mr-6 rounded'>
                     <div className='text-2xl mb-2'><span className='text-3xl opacity-75'>✉</span></div>
                     <h4 className='text-lg font-semibold'>Give</h4>
                     <p className='text-gray-400'>SEED, TITHES, OFFERINGS</p>
@@ -78,21 +78,6 @@ return (
     </section>
 )
 }
-// const MessageIcon = ({picture, pTag, HTag, Buttontag}) => {
-//     return (
-//     <div>
-//         <div className='relative rounded-lg overflow-hidden w-full h-3/4 lg:h-screen shadow-lg mb-6'>
-//         <div className='w-full h-1/2'>
-//         <img src={picture} alt='livestream' className='w-full h-full object-cover' />
-//         </div>
-//         <div className='absolute bottom-0 left-0 w-full bg-opacity-50 p-4'></div>
-//             <h3 className='text-xl font-semibold text-white'>{HTag}</h3>
-//         </div>
-//         <div className=' absolute bottom-0  p-4'>
-//             <h3 className='text-xl font-semibold'>{HTag}</h3>
-//             <p className='text-gray-400 mt-2'>
-//                 {pTag}
-//             </p>
 const MessageIcon = React.memo(({ picture, pTag, HTag, Buttontag }) => {
     return (
             <div className='relative rounded-lg overflow-hidden w-full my-auto h-[60vh] shadow-lg'>

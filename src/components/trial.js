@@ -71,3 +71,24 @@ export default Cluster
             </div>
         </div>
     </section>
+
+    // const MessageIcon = ({picture, pTag, HTag, Buttontag}) => {
+    //     return (
+    //     <div>
+    //         <div className='relative rounded-lg overflow-hidden w-full h-3/4 lg:h-screen shadow-lg mb-6'>
+    //         <div className='w-full h-1/2'>
+    //         <img src={picture} alt='livestream' className='w-full h-full object-cover' />
+    //         </div>
+    //         <div className='absolute bottom-0 left-0 w-full bg-opacity-50 p-4'></div>
+    //             <h3 className='text-xl font-semibold text-white'>{HTag}</h3>
+    //         </div>
+    //         <div className=' absolute bottom-0  p-4'>
+    //             <h3 className='text-xl font-semibold'>{HTag}</h3>
+    //             <p className='text-gray-400 mt-2'>
+    //                 {pTag}
+    //             </p>
+
+
+    s we reflect on the importance of generosity, may we be guided by 
+    Scripture: 'Each one must give as he has decided in his heart, not reluctantly 
+    or under compulsion, for God loves a cheerful giver.' — 2 Corinthians 9:7. May our giving be done in faith and joy.

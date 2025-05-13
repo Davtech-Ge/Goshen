@@ -72,7 +72,7 @@ const Footer = () => {
               <div className='text-xs text-center md:text-left '>
                 <p>&copy; {date} Christ Goshen Assembly Worldwide. All rights reserved.</p>
                 <div className='flex flex-wrap gap-2 justify-center md:justify-start mt-2'>
-                    <a href='#' className='underline'>Privacy Policy</a>
+                  <Link to={'/login'} className='underline'>Privacy Policy</Link>
                     <span>|</span>
                     <a href='#' className='underline'>Terms and Conditions</a>
                 </div>

@@ -8,9 +8,9 @@ const handleClick = (buttonId) => {
 };
 
 return (
-    <section className='bg-black h-[80vh] text-white py-4 px-4 sm:gap-4 relative'>
+    <section className='bg-black h-[90vh] text-white py-4 px-4 sm:gap-4 relative'>
         <h1 className='md:text-2xl text-lg'>Latest Feature</h1>
-        <div className='w-full max-w-4xl h-[70vh] mt-20 mx-auto'>
+        <div className='w-fullml- max-w-4xl h-[70vh] mt-20 mx-auto'>
             <AnimatePresence>
                 <motion.div 
                     whileHover={{ scale: 1.05}}

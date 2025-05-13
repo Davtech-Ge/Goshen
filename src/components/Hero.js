@@ -55,7 +55,7 @@ const Hero = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
-      className="h-screen relative flex items-center px-32"
+      className="h-screen relative flex items-center pt-20 px-32"
     >
       <div className="absolute inset-0 bg-blue-950 opacity-30"></div>
       <div className="z-10 grid gap-14">

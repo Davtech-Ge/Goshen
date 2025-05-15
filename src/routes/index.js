@@ -5,6 +5,8 @@ import Login from "../components/Login";
 import Home from "../pages/Home";
 import SignUp from "../components/SignUp";
 import Dashboard from "../pages/Dashboard";
+import Audio from "../pages/Audio";
+import Users from "../pages/Users";
 
 const router = createBrowserRouter([
     {
@@ -26,7 +28,18 @@ const router = createBrowserRouter([
             },
             {
                 path: 'dashboard',
-                element: <Dashboard />
+                element: <Dashboard />,
+                children: [
+                    {
+                        path: 'audio',
+                        element: <Audio />,
+                        index: true,
+                    },
+                    {
+                        path: 'users',
+                        element: <Users />
+                    }
+                ]
             }
         ]
     }

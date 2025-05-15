@@ -55,10 +55,10 @@ const Hero = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
-      className="h-screen relative flex items-center pt-20 px-32"
+      className="h-screen relative flex items-center pt-20 px-4 sm:px-8 md:px-16 lg:px-32"
     >
       <div className="absolute inset-0 bg-blue-950 opacity-30"></div>
-      <div className="z-10 grid gap-14">
+      <div className="z-10 grid gap-8 sm:gap-10 md:gap-14 w-full max-w-5xl mx-auto">
         <AnimatePresence mode="wait">
           <motion.p
             key={heroData[slideIndex]?.text}
@@ -69,7 +69,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.6 }}
-            className="text-7xl text-white font-bold"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-white font-bold break-words"
           >
             {heroData[slideIndex]?.text}
           </motion.p>
@@ -88,23 +88,23 @@ const Hero = () => {
           >
             <a
               href="#"
-              className="bg-white inline-flex justify-center items-center p-2 rounded-full gap-10 pl-4"
+              className="bg-white inline-flex justify-center items-center p-2 rounded-full gap-4 sm:gap-6 md:gap-10 pl-2 sm:pl-4"
             >
-              <span className="text-xl font-semibold">Learn More</span>
-              <span className="bg-teal-600 p-4 text-white rounded-full">
+              <span className="text-base sm:text-lg md:text-xl font-semibold">Learn More</span>
+              <span className="bg-teal-600 p-3 sm:p-4 text-white rounded-full">
                 <FaArrowRight />
               </span>
             </a>
           </motion.div>
         </AnimatePresence>
 
-        <div className="mt-12 flex gap-2">
+        <div className="mt-8 sm:mt-10 md:mt-12 flex gap-2">
           {heroData.map((data, index) => {
             return (
               <span
                 key={index}
                 onClick={() => setSlideIndex(index)}
-                className={`w-3 h-3 rounded-full cursor-pointer bg-gray-600 hover:bg-white ${
+                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full cursor-pointer bg-gray-600 hover:bg-white ${
                   index === slideIndex && 'bg-teal-600'
                 }`}
               ></span>

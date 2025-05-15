@@ -75,7 +75,6 @@
   @apply bg-cover bg-center bg-no-repeat;
   background-image: url('./logo/bgBlue.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
 }

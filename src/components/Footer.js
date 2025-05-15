@@ -41,8 +41,11 @@ const Footer = () => {
                 <li><Link to={'/'}>Futher Enquires</Link></li>
               </ul>
             </div>
+          </div>
 
-            <div>
+          {/* Social media Links */}
+          <div className='flex flex-col justify-between'>
+             <div className=''>
                 <h3 className='font-semibold text-white mb-2'>RESOURCES</h3>
          
                 <ul className='space-y-2'>
@@ -59,17 +62,14 @@ const Footer = () => {
                   <li><Link to={'/'}>Narayi campus</Link></li>
                 </ul>
             </div>
-          </div>
-
-          {/* Social media Links */}
-          <div className='flex flex-col justify-between'>
-            <div className='flex space-x-4 mb-6'>
+            
+              <div className='text-xs text-center md:text-left '>
+                <div className='flex space-x-4 mb-6'>
                    <a href='https://youtube.com/@apostlegloryhelenikeleji3559?si=DDicRgBTUCcPFA5s' className='text-2xl h-5 text-red-600'> <FaYoutube /></a>
                    <a href='https://www.facebook.com/christ.goshen.7' className='text-2xl h-4 text-blue-600'> <FaFacebook /></a>
                    {/* <a href='https://www.facebook.com/christ.goshen.7' className='text-4xl text-green-600'> <FaWhatsapp /></a> */}
                    <a href='mailto:christgoshencitybethel@gmail.com?subject=Information Request&body=Hello Goshen City, I am will like to get an information concerning...' className='text-2xl text-blue-600 h-4'> <MdEmail/></a>
-            </div>
-              <div className='text-xs text-center md:text-left '>
+                </div>
                 <p>&copy; {date} Christ Goshen Assembly Worldwide. All rights reserved.</p>
                 <div className='flex flex-wrap gap-2 justify-center md:justify-start mt-2'>
                   <Link to={'/login'} className='underline'>Privacy Policy</Link>

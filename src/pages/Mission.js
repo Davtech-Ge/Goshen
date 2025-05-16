@@ -33,32 +33,6 @@ const Mission = () => {
                         Upholding truth and integrity in all things (Proverbs 12:22)
                     </li>
                 </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-Core Beliefs
-Restoration of Destinies
-We believe in divine restoration and the fulfillment of God-ordained purposes. (1 Samuel 30:8, Joel 2:25)
-
-Deliverance and Freedom
-We believe in the power of God to set the captives free from all bondage. (Isaiah 61:1)
-
-Fruitfulness
-We believe that God's blessing empowers believers to be fruitful and multiply in every area of life. (Genesis 1:28)
-
-Royal Priesthood
-We believe that every believer is chosen, set apart, and called to walk in spiritual authority and holiness. (1 Peter 2:9)
-
-
     
             </div>
         </div>

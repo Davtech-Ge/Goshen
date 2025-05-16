@@ -8,19 +8,21 @@ const FirstFruit = () => {
         <h1 className="text-2xl md:text-3xl text-white font-semibold mb-5 text-center">
           Payment of your First Fruit unlock God's overflowing blessings in your life.
         </h1>
-        <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-48 w-full items-center">
+        <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-40 w-full items-center">
+            <button className="mt-5 md:mt-7 border-teal-600 border rounded-md py-3 md:py-4 px-6 md:px-8 text-white hover:bg-teal-600 hover:text-white transition-colors duration-500">
           <Link
-            to={'/giving'}
-            className="border-gray-500 text-white border rounded-md py-4 px-8 hover:bg-gray-600 mb-2 md:mb-0 text-center"
+            to='/giving'
           >
             Pay Now
           </Link>
+          </button>
+          <button className="mt-5 md:mt-7 border-teal-600 border rounded-md py-3 md:py-4 px-6 md:px-8 text-white hover:bg-teal-600 hover:text-white transition-colors duration-500">
           <Link
-            to={'/giving'}
-            className="border-gray-500 transition-colors duration-500 text-white border rounded-md py-4 px-8 hover:bg-gray-600 text-center"
+            to='/giving'
           >
             Learn More
           </Link>
+          </button>
         </div>
       </div>
       <div className="bg-opacity-70 w-full md:w-[50%] h-auto md:h-[50vh] mb-4 rounded shadow flex items-center justify-center">

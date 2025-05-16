@@ -7,6 +7,9 @@ import SignUp from "../components/SignUp";
 import Dashboard from "../pages/Dashboard";
 import Audio from "../pages/Audio";
 import Users from "../pages/Users";
+import AboutUs from "../pages/AboutUs";
+import Mission from "../pages/Mission";
+import Belief from "../pages/Belief";
 
 const router = createBrowserRouter([
     {
@@ -39,6 +42,23 @@ const router = createBrowserRouter([
                         path: 'users',
                         element: <Users />
                     }
+                ]
+            },
+            {
+                path: "about",
+                children:  [
+                    {
+                        path: "history",
+                        element: <AboutUs />
+                    },
+                    {
+                        path: "mission",
+                        element: <Mission />
+                    },
+                    {
+                        path: "belief",
+                        element: <Belief />
+                    },
                 ]
             }
         ]

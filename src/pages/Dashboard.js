@@ -1,39 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import Upload from '../components/Upload';
-import supabase from '../supabaseClient';
+import { useAuth } from '../context/AuthContext';
 
 const Dashboard = () => {
   const [openUpload, setOpenUpload] = useState(false);
   const [openLink, setOpenLink] = useState(false);
-  const [user, setUser] = useState(null);
-  const [role, setRole] = useState('');
-  
-  useEffect(() => {
-    const fetchUser = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
+ const { user, login, logout } = useAuth()
 
-      if (session) {
-        setUser(session.user);
-
-        // Fetch user role from a custom table (if applicable)
-        // const { data, error } = await supabase
-        //   .from('users') // Replace 'profiles' with your table name
-        //   .select('role')
-        //   .eq('id', session.user.id)
-        //   .single();
-
-        // if (data) {
-        //   setRole(data.role);
-        // } else if (error) {
-        //   console.error('Error fetching role:', error.message);
-        // }
-      }
-    };
-
-//     fetchUser();
-  }, []);
-  console.log()
+ const handleLogout = () => {
+  logout();
+  setTimeout(()=> {
+    window.location.href ='/'
+  }, 2000)
+ 
+ }
   return (
     <main className='flex w-full h-screen bg-black'>
       {/* Sidebar */}
@@ -45,21 +26,21 @@ const Dashboard = () => {
               <li>
                 <Link 
                 onClick={() => setOpenLink(true)}
-                to='users' className='text-white'>
+                to='/dashboard/users' className='text-white'>
                   Users
-                </Link>
+                </Link >
               </li>
               <li>
                 <Link
                  onClick={() => setOpenLink(true)}
-                to='audio' className='text-white'>
+                to='/dashboard/audio' className='text-white'>
                   Audio
                 </Link>
               </li>
               <li>
-                <Link to='/logout' className='text-white'>
+                <button onClick={handleLogout} className='text-white'>
                   Logout
-                </Link>
+                </button>
               </li>
             </ul>
           </nav>
@@ -70,7 +51,7 @@ const Dashboard = () => {
       <section className='w-3/4 h-full p-8 mt-14'>
         { openLink === false ? (
                 <div className='flex justify-between w-full p-8'>
-          <h2 className='text-2xl font-bold text-white'>Welcome to the Dashboard</h2>
+          <h2 className='text-2xl font-bold text-white'>Welcome {user ? user.email : 'Guest'}</h2>
           <button
             onClick={() => setOpenUpload(true)}
             className='bg-blue-800 text-white py-2 px-4 rounded-full'
@@ -79,7 +60,12 @@ const Dashboard = () => {
           </button>
         </div>
         ) : (
-         <Outlet /> // outlets
+         <section className="w-3/4 h-full p-8 mt-14">
+        <h2 className="text-2xl font-bold text-white">
+          Welcome, {user ? user.email : "Guest"}
+        </h2>
+        <Outlet />
+      </section> // outlets
         )}
 
         

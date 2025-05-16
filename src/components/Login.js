@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import  supabase  from '../supabaseClient'
 import {useState, useEffect} from 'react'
-
+import { useAuth } from '../context/AuthContext';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
@@ -9,6 +9,8 @@ const Login = () => {
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
   const [session, setSession] = useState(null)
+
+  const { login } = useAuth()
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -23,13 +25,14 @@ const Login = () => {
 
     setLoading(false);
 
-    if (error) {
-      setMessage(error.message);
-    } else {
+    if (data) {
+      login(data.user);
       setMessage('');
       setTimeout(() => {
         window.location.href = '/dashboard';
       }, 2000);
+    } else {
+      setMessage(error.message);
     }
   };
   

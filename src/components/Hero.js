@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import image1 from '../assets/homepage.jpg'
 import image2 from '../assets/externalminis.jpg'
 import image3 from '../assets/third.jpg'
@@ -13,7 +13,6 @@ const HeroMessage = ({Message1, message2, message3, message4}) => {
   )
 }
 
-const Second = () => {return (<h1>A Place where Gods <br /> Word is Revealed</h1>)}
 const heroData = [
   {
     text: <HeroMessage Message1={'Christ Goshen city'} message2={'Assembly worldWide'} message3={'The place of '} message4={'Encountering God.'}/>,
@@ -60,7 +59,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-blue-950 opacity-30"></div>
       <div className="z-10 grid gap-8 sm:gap-10 md:gap-14 w-full max-w-5xl mx-auto">
         <AnimatePresence mode="wait">
-          <motion.p
+          <motion.div
             key={heroData[slideIndex]?.text}
             initial={{
               opacity: 0,
@@ -72,7 +71,7 @@ const Hero = () => {
             className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-white font-bold break-words"
           >
             {heroData[slideIndex]?.text}
-          </motion.p>
+          </motion.div>
         </AnimatePresence>
 
         <AnimatePresence mode="wait">

@@ -3,11 +3,8 @@ import FirstFruit from './FirstFruit'
 
 const BoxStyles = () => {
 return (
-    <section className="w-full min-h-screen pt-20 flex bg-black mb-12">
+    <section className="w-full min-h-screen pt-16 flex bg-black mb-12">
         <div className="w-full min-h-screen p-4 flex flex-col">
-            <div className="w-full">
-                <FirstFruit />
-            </div>
             <div className="flex flex-col md:flex-row w-full">
                 <div className="w-full md:w-1/3 h-fit bg-blue-800 rounded-lg p-6 md:p-10 mx-0 md:mx-5 my-5">
                     <h1 className="text-2xl md:text-4xl text-white">
@@ -22,7 +19,7 @@ return (
                 </div>
 
                 <div className="w-full md:w-1/3 h-fit md:bg-blue-800 bg-black rounded-lg p-6 md:p-10 mx-0 md:mx-5 my-5">
-                    <h1 className="text-2xl md:text-4xl text-blue-800 md:text-white">
+                    <h1 className="text-2xl md:text-4xl text-blue-600 font-semibold md:text-white">
                         Find a Homecell <br />Near You
                     </h1>
                     <p className="text-base md:text-xl text-white mt-4 md:mt-6">
@@ -45,7 +42,7 @@ return (
             </div>
             <div className="flex flex-col md:flex-row w-full h-full">
                 <div className="w-full md:w-1/3 h-fit md:bg-blue-800 bg-black rounded-lg p-6 md:p-10 mx-0 md:mx-5 my-5">
-                    <h1 className="text-2xl md:text-4xl text-blue-800 md:text-white">Testimony</h1>
+                    <h1 className="text-2xl md:text-4xl text-blue-600 font-semibold md:text-white">Testimony</h1>
                     <p className="text-base md:text-xl text-white mt-4 md:mt-6">
                         Have you been blessed through any of our services? We will love to hear your story! Your testimony can inspire and encourage others in their walk of faith. <br />Click below to share how God has touched your life
                     </p>
@@ -59,6 +56,9 @@ return (
                 <div className="sm:hidden w-full md:w-1/3 h-40 md:h-[50vh] bg-black p-6 md:p-10 mx-0 md:mx-5 my-5 flex items-center justify-center">
                     <h1 className="text-black">hello</h1>
                 </div> */}
+            </div>
+            <div className="w-full">
+                <FirstFruit />
             </div>
         </div>
     </section>

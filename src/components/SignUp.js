@@ -4,7 +4,6 @@ import {useState} from 'react'
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
-  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
   const handleSignup = async (e) => {
@@ -13,7 +12,6 @@ const SignUp = () => {
 
     const { error, data } = await supabase.auth.signUp({
       email: email,
-      username: username,
       password: password,
     });
 
@@ -34,12 +32,6 @@ const SignUp = () => {
             <h2 className='text-2xl font-semibold text-white mb-4'>Sign Up</h2>
             {message && <p className='text-red-500 mb-4'>{message}</p>}
             <form onSubmit={handleSignup} className='flex flex-col'>
-                <input type='username'
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  placeholder='Username' 
-                  className='mb-4 p-2 rounded-md' 
-                 />
                 <input type='email'
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}

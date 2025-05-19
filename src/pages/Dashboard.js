@@ -16,7 +16,7 @@ const Dashboard = () => {
  
  }
   return (
-    <main className='flex w-full h-screen bg-black'>
+    <main className='flex w-full h-screen justify-between bg-black'>
       {/* Sidebar */}
       <aside className='w-1/4 h-full bg-gray-900'>
         <div className='flex flex-col items-center justify-center h-full'>
@@ -38,6 +38,13 @@ const Dashboard = () => {
                 </Link>
               </li>
               <li>
+                <Link
+                 onClick={() => setOpenLink(true)}
+                to='/dashboard/newsletter' className='text-white'>
+                 Send Newsletter
+                </Link>
+              </li>
+              <li>
                 <button onClick={handleLogout} className='text-white'>
                   Logout
                 </button>
@@ -52,12 +59,6 @@ const Dashboard = () => {
         { openLink === false ? (
                 <div className='flex justify-between w-full p-8'>
           <h2 className='text-2xl font-bold text-white'>Welcome {user ? user.email : 'Guest'}</h2>
-          <button
-            onClick={() => setOpenUpload(true)}
-            className='bg-blue-800 text-white py-2 px-4 rounded-full'
-          >
-            Upload
-          </button>
         </div>
         ) : (
          <section className="w-3/4 h-full p-8 mt-14">
@@ -71,12 +72,6 @@ const Dashboard = () => {
         
       </section>
 
-      {/* Upload Modal */}
-      {openUpload && (
-        <div className='fixed inset-0 z-50 flex items-center justify-center text-white bg-black bg-opacity-80'>
-          <Upload onClose={() => setOpenUpload(false)} />
-        </div>
-      )}
     </main>
   );
 };

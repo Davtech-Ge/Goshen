@@ -10,6 +10,7 @@ import Users from "../pages/Users";
 import AboutUs from "../pages/AboutUs";
 import Mission from "../pages/Mission";
 import Belief from "../pages/Belief";
+import Newsletter from "../components/Newsletter";
 
 const router = createBrowserRouter([
     {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
                     {
                         path: 'users',
                         element: <Users />
+                    },
+                    {
+                        path: 'newsletter',
+                        element: <Newsletter />
                     }
                 ]
             },

@@ -121,10 +121,10 @@ const Navbar = () => {
                   <Link to='/media/gallery'>Gallery</Link>
                 </li>
                 <li className='px-4 py-2 hover:bg-blue-600'>
-                  <Link to='/media/videos'>Videos</Link>
+                  <Link to='https://audiomack.com/christgoshencitybethel/song/'>Audios</Link>
                 </li>
                 <li className='px-4 py-2 hover:bg-blue-600'>
-                  <Link to='/media/live'>Live Streams</Link>
+                  <Link to='https://web.facebook.com/christ.goshen.7/'>Live Streams</Link>
                 </li>
               </ul>
             )}
@@ -244,10 +244,10 @@ const Navbar = () => {
                       <Link to='/media/gallery'>Gallery</Link>
                     </li>
                     <li className='px-4 py-2 hover:bg-blue-600'>
-                      <Link to='/media/videos'>Videos</Link>
+                      <Link to='https://audiomack.com/christgoshencitybethel/song/'>Audios</Link>
                     </li>
                     <li className='px-4 py-2 hover:bg-blue-600'>
-                      <Link to='/media/live'>Live Streams</Link>
+                      <Link to='https://web.facebook.com/christ.goshen.7/'>Live Streams</Link>
                     </li>
                   </ul>
                 )}

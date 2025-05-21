@@ -1,5 +1,6 @@
 import React from 'react'
 import FirstFruit from './FirstFruit'
+import { Link } from 'react-router-dom'
 
 const BoxStyles = () => {
 return (
@@ -14,7 +15,9 @@ return (
                         Click here to Listen to Apostle Glory's sermon on all our platform and be blessed in Jesus name.
                     </p>
                     <button className="mt-6 md:mt-10 border-teal-600 border rounded-md py-3 md:py-4 px-6 md:px-8 text-white hover:bg-teal-600 hover:text-white transition-colors duration-500">
-                        Listen
+                        <Link to='https://audiomack.com/christgoshencitybethel/song/'>
+                            Listen
+                        </Link>
                     </button>
                 </div>
 

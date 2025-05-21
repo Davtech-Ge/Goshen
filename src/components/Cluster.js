@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { AnimatePresence, motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Cluster = () => {
      const [selectedButton, setSelectedButton] = useState(null);
@@ -41,6 +42,14 @@ return (
                         Buttontag={
                             selectedButton === 3 ? 'See Details' : 'Watch Now'
                         }
+
+                        Linktag={
+                            selectedButton === 2 
+                            ? 'https://web.facebook.com/christ.goshen.7/'
+                            : selectedButton === 3 
+                            ? '/giving'
+                            : "https://audiomack.com/christgoshencitybethel/song"
+                        }
                     />
                 </motion.div>
             </AnimatePresence>
@@ -78,7 +87,7 @@ return (
     </section>
 )
 }
-const MessageIcon = React.memo(({ picture, pTag, HTag, Buttontag }) => {
+const MessageIcon = React.memo(({ picture, pTag, HTag, Buttontag, Linktag }) => {
     return (
             <div className='relative rounded-lg overflow-hidden w-full my-auto h-[60vh] shadow-lg'>
                 <div className='w-full'>
@@ -88,7 +97,9 @@ const MessageIcon = React.memo(({ picture, pTag, HTag, Buttontag }) => {
                     <h3 className='text-lg font-semibold'>{HTag}</h3>
                     <p className='text-gray-300  mt-2'>{pTag}</p>
                     <button className='mt-4 border border-yellow-500 text-yello-500 px-3 py-1 rounded-full hover:text-yellow-600'>
-                        {Buttontag}
+                        <Link to={Linktag} >
+                          {Buttontag}
+                        </Link>
                     </button>
                 </div>
             </div>

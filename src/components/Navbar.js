@@ -76,13 +76,13 @@ const Navbar = () => {
             {dropdown === 'mission' && (
               <ul className='absolute top-full left-0 bg-blue-800 text-white rounded shadow-md mt-2 py-2 w-48'>
                 <li className='px-4 py-2 hover:bg-blue-600'>
-                  <Link to='/mission/vision'>Vision</Link>
+                  <Link to='/about/mission'>Vision</Link>
                 </li>
                 <li className='px-4 py-2 hover:bg-blue-600'>
-                  <Link to='/mission/goals'>Goals</Link>
+                  <Link to='/about/belief'>Goals</Link>
                 </li>
                 <li className='px-4 py-2 hover:bg-blue-600'>
-                  <Link to='/mission/values'>Core Values</Link>
+                  <Link to='/about/belief'>Core Values</Link>
                 </li>
               </ul>
             )}
@@ -97,13 +97,13 @@ const Navbar = () => {
             {dropdown === 'giving' && (
               <ul className='absolute top-full left-0 bg-blue-800 text-white rounded shadow-md mt-2 py-2 w-48'>
                 <li className='px-4 py-2 hover:bg-blue-600'>
-                  <Link to='/giving/tithes'>Tithes</Link>
+                  <Link to='/giving.html'>Tithes</Link>
                 </li>
                 <li className='px-4 py-2 hover:bg-blue-600'>
-                  <Link to='/giving/offering'>Offering</Link>
+                  <Link to='/giving.html'>Offering</Link>
                 </li>
                 <li className='px-4 py-2 hover:bg-blue-600'>
-                  <Link to='/giving/first-fruit'>First Fruit</Link>
+                  <Link to='/giving.html'>First Fruit</Link>
                 </li>
               </ul>
             )}
@@ -197,13 +197,13 @@ const Navbar = () => {
                 {dropdown === 'mission' && (
                   <ul className='bg-blue-700 text-white rounded shadow-md mt-2 py-2 w-full'>
                     <li className='px-4 py-2 hover:bg-blue-600'>
-                      <Link to='/mission/vision'>Vision</Link>
+                      <Link to='/about/mission'>Vision</Link>
                     </li>
                     <li className='px-4 py-2 hover:bg-blue-600'>
-                      <Link to='/mission/goals'>Goals</Link>
+                      <Link to='/about/belief'>Goals</Link>
                     </li>
                     <li className='px-4 py-2 hover:bg-blue-600'>
-                      <Link to='/mission/values'>Core Values</Link>
+                      <Link to='/about/belief'>Core Values</Link>
                     </li>
                   </ul>
                 )}
@@ -219,13 +219,13 @@ const Navbar = () => {
                 {dropdown === 'giving' && (
                   <ul className='bg-blue-700 text-white rounded shadow-md mt-2 py-2 w-full'>
                     <li className='px-4 py-2 hover:bg-blue-600'>
-                      <Link to='/giving/tithes'>Tithes</Link>
+                      <Link to='/giving.html'>Tithes</Link>
                     </li>
                     <li className='px-4 py-2 hover:bg-blue-600'>
-                      <Link to='/giving/offering'>Offering</Link>
+                      <Link to='/giving.html'>Offering</Link>
                     </li>
                     <li className='px-4 py-2 hover:bg-blue-600'>
-                      <Link to='/giving/first-fruit'>First Fruit</Link>
+                      <Link to='/giving.html'>First Fruit</Link>
                     </li>
                   </ul>
                 )}

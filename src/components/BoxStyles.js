@@ -39,7 +39,7 @@ return (
                         kindly click the button below to make a secure payment of your Seed, Tithe, Offering, or contribution towards the Church Building Project. We appreciate your generosity and commitment to the work of God
                     </p>
                     <button className="mt-5 md:mt-7 border-teal-600 border rounded-md py-3 md:py-4 px-6 md:px-8 text-white hover:bg-teal-600 hover:text-white transition-colors duration-500">
-                        Pay Now
+                        <Link to='/giving.html'>Pay Now</Link>
                     </button>
                 </div>
             </div>

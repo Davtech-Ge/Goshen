@@ -11,6 +11,7 @@ import AboutUs from "../pages/AboutUs";
 import Mission from "../pages/Mission";
 import Belief from "../pages/Belief";
 import Newsletter from "../components/Newsletter";
+import Giving from "../pages/Giving";
 
 const router = createBrowserRouter([
     {
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
                         element: <Belief />
                     },
                 ]
+            },
+            {
+                path: 'giving.html',
+                element: <Giving />
             }
         ]
     }

@@ -30,13 +30,13 @@ const Dashboard = () => {
                   Users
                 </Link >
               </li>
-              <li>
+              {/* <li>
                 <Link
                  onClick={() => setOpenLink(true)}
                 to='/dashboard/audio' className='text-white'>
                   Audio
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                  onClick={() => setOpenLink(true)}
@@ -55,13 +55,13 @@ const Dashboard = () => {
       </aside>
 
       {/* Main Content */}
-      <section className='w-3/4 h-full p-8 mt-14'>
+      <section className='w-3/4 h-full p-8 mt-12'>
         { openLink === false ? (
                 <div className='flex justify-between w-full p-8'>
           <h2 className='text-2xl font-bold text-white'>Welcome {user ? user.email : 'Guest'}</h2>
         </div>
         ) : (
-         <section className="w-3/4 h-full p-8 mt-14">
+         <section className="w-3/4 h-screen overflow-hidden p-6 mt-10">
         <h2 className="text-2xl font-bold text-white">
           Welcome, {user ? user.email : "Guest"}
         </h2>

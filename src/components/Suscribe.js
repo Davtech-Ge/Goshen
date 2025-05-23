@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { FaRegNewspaper } from 'react-icons/fa';
+import supabase from '../supabaseClient';
 
 
 const NewsletterIcon = () => {
   const [open, setOpen] = useState(false);
-
   return (
     <>
       {/* Floating Icon */}
@@ -27,7 +27,7 @@ const NewsletterIcon = () => {
             >
               &times;
             </button>
-            <Newsletter />
+            <Newsletter setOpen={setOpen} />
           </div>
         </div>
       )}
@@ -35,15 +35,26 @@ const NewsletterIcon = () => {
   );
 };
 
-const Newsletter = () => {
+const Newsletter = ({setOpen}) => {
     const [email, setEmail] = useState('')
+
+    const handleSuscribe = async (e) => {
+      e.preventDefault();
+      setOpen(false)
+
+      const { data, error} = await supabase.from('suscriber').insert({
+        email: email
+      })
+    }
     return (
         <div className='p-4 '>
             <h1 className='text-black text-xl mb-2 '>Suscribe to our Newsletter</h1>
             <form>
                 <input type='text' placeholder='Email' value={email} onChange={(e)=> setEmail(e.target.value)} className='w-full bg-teal-400 py-2 rounded-lg'/>
 
-                <button className='bg-blue-600 hover:bg-blue-700 w-full py-3 text-white mt-3 rounded-lg'>Suscribe</button>
+                <button
+                onClick={handleSuscribe}
+                 className='bg-blue-600 hover:bg-blue-700 w-full py-3 text-white mt-3 rounded-lg'>Suscribe</button>
             </form>
         </div>
     )

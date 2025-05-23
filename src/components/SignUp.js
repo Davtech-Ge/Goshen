@@ -10,10 +10,11 @@ const SignUp = () => {
     e.preventDefault()
     setMessage('')
 
-    const { error, data } = await supabase.auth.signUp({
+    const { data, error} = await supabase.auth.signUp({
       email: email,
       password: password,
-    });
+      
+    })
 
     if (error) {
         setMessage(error.message);

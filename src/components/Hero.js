@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import image1 from '../assets/firs.png'
-import image2 from '../assets/secon.png'
+import image2 from '../assets/firs.png'
+import image1 from '../assets/secon.png'
 import image3 from '../assets/third.jpg'
 import { FaArrowRight } from 'react-icons/fa'
 import { AnimatePresence, motion } from 'framer-motion'

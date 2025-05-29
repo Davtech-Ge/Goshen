@@ -1,10 +1,10 @@
 import React from "react";
 
 const accounts = [
-  { bank: "Eco Bank", account: "1234567890", name: "Christ Goshen City", description: "Tithe and Offering" },
-  { bank: "Eco Bank", account: "0987654321", name: "Christ Goshen City", description: "First Fruit" },
-  { bank: "Eco Bank", account: "1122334455", name: "Christ Goshen City", description: "Church Building projects" },
-  { bank: "Eco Bank", account: "5566778899", name: "Christ Goshen City", description: "SEED" },
+  { bank: "Eco Bank", account: "3840033268", name: "Christ Goshen City", description: "Tithe and Offering" },
+  { bank: "Eco Bank", account: "3840033275", name: "Christ Goshen City", description: "Generator Account" },
+  { bank: "Eco Bank", account: "3840068123", name: "Christ Goshen City", description: "Welfare Account" },
+  { bank: "Eco Bank", account: "3840042529", name: "Christ Goshen City", description: "Project Account" },
 ];
 
 const scripture = (

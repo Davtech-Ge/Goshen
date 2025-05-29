@@ -58,7 +58,7 @@ const Hero = () => {
       className="h-screen relative flex items-center pt-20 px-4 sm:px-8 md:px-16 lg:px-32"
     >
       <div className="absolute inset-0 bg-blue-950 opacity-30"></div>
-      <div className="z-10 grid gap-8 sm:gap-10 md:gap-14 w-full max-w-5xl mx-auto">
+      <div className="z-10 grid gap-8 sm:gap-10 md:gap-14 w-full max-w-5xl text-left mx-auto">
         <AnimatePresence mode="wait">
           <motion.div
             key={heroData[slideIndex]?.text}
@@ -69,7 +69,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-white font-bold break-words"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-white font-bold break-words text-left"
           >
             {heroData[slideIndex]?.text}
           </motion.div>
@@ -85,9 +85,10 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-left"
           >
             <a
-              href="#"
+              href="/about/history"
               className="bg-white inline-flex justify-center items-center p-2 rounded-full gap-4 sm:gap-6 md:gap-10 pl-2 sm:pl-4"
             >
               <span className="text-base sm:text-lg md:text-xl font-semibold">Learn More</span>

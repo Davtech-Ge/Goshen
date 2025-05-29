@@ -25,7 +25,7 @@ return (
                         By the leading of the Holy Spirit, the ministry has grown to include two thriving branches, both committed to advancing the Kingdom through sound doctrine, apostolic leadership, and prophetic activation. Each branch is a wellspring of healing, hope, and empowerment—raising disciples who walk in dominion and influence their communities with the love and power of Jesus Christ.
                     </p>
 
-                    <h2 className=' border-b-blue-700 border text-xl font-bold text-blue-600 mb-4'>Our Core Mandates:</h2>
+                    <h2 className='text-xl font-bold text-blue-600 mb-4'>Our Core Mandates:</h2>
                     <ul className='list-disc pl-6'>
                         <li>
                             Word – To teach and preach the undiluted truth of the Gospel with power and clarity.

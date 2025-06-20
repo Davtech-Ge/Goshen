@@ -23,6 +23,7 @@
 }
 
 .messages {
+  background-color: #0f172a; /* fallback color for dark blue */
   background-image: url('./logo/1745803848598.jpg');
   background-size: cover;
   width: 100%;

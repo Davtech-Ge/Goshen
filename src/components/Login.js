@@ -25,15 +25,14 @@ const Login = () => {
 
     setLoading(false);
 
-    if (data) {
-      login(data.user);
-      setMessage('');
-      setTimeout(() => {
-        window.location.href = '/dashboard';
-      }, 2000);
-    } else {
-      setMessage(error.message);
-    }
+    // ...existing code...
+if (data) {
+  login(data.user);
+  setMessage('');
+  window.location.href = '/dashboard'; // Redirect immediately
+} else {
+  setMessage(error.message);
+}
   };
   
   useEffect(() => {

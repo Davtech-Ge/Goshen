@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
           <a
             href='mailto:christgoshencitybethel@gmail.com?subject=Information Request&body=Hello Goshen City, I am will like to get an information concerning...'
-            className='text-yellow-400 border p-2 border-yellow-400 rounded-full font-semibold mt-2 inline-block'
+            className='text-yellow-400 border p-2 border-blue-400 rounded-full font-semibold mt-2 inline-block'
           >
             Contact Us
           </a>
@@ -87,7 +87,7 @@ const Footer = () => {
               </li>
             </ul>
 
-            <h3 className='font-semibold text-white mb-6'>CENTERS</h3>
+            <h3 className='font-semibold text-white my-5'>CENTERS</h3>
             <ul className='space-y-2'>
               <li>
                 <Link to={'/'}>Maigero Campus</Link>

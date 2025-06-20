@@ -57,7 +57,7 @@ const Hero = () => {
       }}
       className="h-screen relative flex items-center pt-20 px-4 sm:px-8 md:px-16 lg:px-32"
     >
-      <div className="absolute inset-0 bg-blue-950 opacity-30"></div>
+      <div className="absolute inset-0 opacity-30"></div>
       <div className="z-10 grid gap-8 sm:gap-10 md:gap-14 w-full max-w-5xl text-left mx-auto">
         <AnimatePresence mode="wait">
           <motion.div

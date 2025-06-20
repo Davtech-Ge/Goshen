@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
           <a
             href='mailto:christgoshencitybethel@gmail.com?subject=Information Request&body=Hello Goshen City, I am will like to get an information concerning...'
-            className='text-yellow-400 border p-2 border-blue-400 rounded-full font-semibold mt-2 inline-block'
+            className='text-white border p-2 border-blue-400 rounded-full font-semibold mt-2 inline-block'
           >
             Contact Us
           </a>
